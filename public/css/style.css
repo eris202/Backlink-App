@@ -1,0 +1,149 @@
+
+
+  :root{
+      --primary-color:#333333;
+      --primary-bg:#202b44;
+      --font-title:25px;
+      --font-subtitle:18px; 
+      --font-general: 15px;
+      --light-bg: #f5f6fc;
+      --text-blue:#202b44 !important;
+      --primary-border-color:#202b44;
+      --font-color:#333333;
+      --btn-primary-bg:#202b44;
+      --bg-hover-light:#f3edf2;
+  }
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-general);
+    color: var(--font-color)
+}
+input,button,textarea{
+    border: none;
+    outline: none;
+}
+header{
+    position: sticky;
+    z-index:4px;
+}
+.primary-color{
+ color:var(--primary-color)   
+}
+.primary-bg{
+    background: var(--primary-bg)
+}
+.users input.fullname{
+    background: url("../images/user.svg");
+}.users input.password{
+    background: url("../images/key.svg");
+}
+.users input.password-2{
+    background: url("../images/key-outline.svg");
+}
+
+.users input{
+padding:  0 35px 0 40px;
+  background-position:10px 7px !important;
+    background-repeat: no-repeat !important;
+}
+.input{
+border: 1px solid #888888;
+height: 40px    ;
+}
+.light-bg{
+    background: var(--light-bg);
+}
+.title{
+    font-size: var(--font-title)
+}
+.subtitle{
+    font-size:var(--font-subtitle);
+}
+.summarize div:nth-child(1){
+    width: 85px;
+    min-width:85px;
+    height: 85px;
+}
+.job_title{
+    color: #202b44;
+}
+.summarize div:nth-child(2) div:nth-child(1){
+width:auto;
+display:block;
+}
+.pass-visibility{
+    width:40px;
+    height:40px;
+    background:url("../images/eye.svg");
+    background-repeat:no-repeat;
+    background-position:right;
+    z-index:1;
+    cursor:pointer;
+    position:absolute;
+    right:10px;top:50%;
+    transform:translateY(-50%)
+}
+.pass-visibility.slash{
+    background-image:url("../images/eye-slash.svg");
+
+}
+/* below the fold */
+
+/* job posting */
+.profile_img{
+    max-width: 50px;
+    max-height:50px;
+    background-position: center;
+    background-size: cover;
+}
+.c-btn-light{
+padding: 4px;
+border: 2px solid transparent;
+background: var(--btn-primary-bg);
+transition: all.3s ease-in-out;
+}
+.job-list:hover{
+    cursor: pointer;    
+    background: var(--bg-hover-light) !important;
+    color: var(--primary-color)
+}
+
+.job-list::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--primary-bg);
+    transform: scaleY(0)
+}
+.job-list:hover::after{
+    transition: transform .3s ease-in;
+    transform: scaleY(1)
+}
+input.search{
+    background: var(--light-bg);
+}
+.job-descrip{
+    height:84px;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.c-btn-light:hover{
+    background: var(--light-bg);
+    border-color: var(--primary-border-color);
+    }
+    
+    .c-btn-light:hover small{
+        color: var(--text-blue)
+    }
+    

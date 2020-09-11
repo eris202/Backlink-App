@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dofollow dot app </title>
+    <link rel="stylesheet" href="css/bootstrap.css"></link>
+    <link rel="stylesheet" href="css/style.css"></link>
+</head>
+<body>
+    
+<!-- header -->
+<header class="py-4">
+<div class="container">
+    <div class="row">
+        <a href="/" class="col-4">DoFollow.Appp</a>
+        <div class="col-8 text-right"><span>Already have an account? <a href="#!" class="primary-color">Log in</a></span></div>
+    </div>
+</div>
+</header>
+<!-- /header -->
+
+<!-- signp container -->
+<div class="primary-bg position-relative overflow-hidden py-5">
+    <div class="container">
+    <div class="col-lg-6 mx-auto bg-white py-3">
+    <form class="col users" action="signup" method="POST">
+            <h1 class="title text-center pb-3">
+                    Get your account 
+                </h1>
+        <div class="form-group">
+        <input class="input col fullname" type="text"  name="fullname" placeholder="Your Fullname">
+       
+    <% if(typeof(fullname)=="object"){ %>
+           <span class="text-danger errmsg1">  <%= fullname.msg %> <% } %>
+       
+        </span>
+        </div>
+
+        <div class="form-group">
+       
+        <input class="input col" type="email" class="email-1" name="email" placeholder="Working Email">
+        
+        <% if(typeof(email)=="object"){ %>
+        <span class="text-danger errmsg">    <%= email.msg %></span>
+        <% } %>
+        
+        </div>
+
+        <div class="form-group position-relative">
+          <div class="pass-visibility"></div>
+        <input class="input col password" type="password" name="password"placeholder="Password">
+        <span class="text-danger errmsg"> <% if(typeof(password1)=="object"){ %>
+            <%= password1.msg %>
+        <% } %></span>
+        </div>
+
+        <div class="form-group">
+        <input class="input col password-2" type="text" name="confirm-password" placeholder="Confirm Password">
+        <span class="text-danger errmsg"> <% if(typeof(password2)=="object"){ %>
+            <%= password2.msg %>
+        <% } %></span>
+        </div>
+        <button type="submit" class="input primary-bg col text-white" id="signup">Signup</button>
+    </form>
+    </div>
+</div>
+</div>
+<!-- / signup container -->
+
+<!-- inroduction -->
+<div class="container py-5">
+<div class="row pt-3">
+    <!-- heading -->
+    <div class="subtitle col-12 text-center pb-5">
+        Get together of publisher and co
+    </div>
+<!-- grid one -->
+<div class="col-md-4 summarize d-flex mt-sm-3">
+    <div class="text rounded-circle primary-bg "></div>
+    <div class="col-1"></div>
+    <div>
+        <div style="display: contents" class="font-weight-bold">Find what you need</div>
+        <div class="summary">Yes, quicly find what you need within minues</div>
+    </div>
+    <div></div>
+
+</div>
+<!-- / grid one -->
+<!-- grid two -->
+<div class="col-md-4 summarize d-flex mt-sm-3">
+        <div class="text rounded-circle primary-bg "></div>
+        <div class="col-1"></div>
+        <div>
+            <div style="display: contents" class="font-weight-bold">Find what you need</div>
+            <div class="summary">Yes, quicly find what you need within minues</div>
+        </div>
+        <div></div>
+    
+    </div>
+<!-- grid two -->
+<!-- grid three -->
+<div class="col-md-4 summarize d-flex mt-sm-3">
+        <div class="text rounded-circle primary-bg "></div>
+        <div class="col-1"></div>
+        <div>
+            <div style="display: contents" class="font-weight-bold">Find what you need</div>
+            <div class="summary">Yes, quicly find what you need within minues</div>
+        </div>
+        <div></div>
+    
+    </div>
+<!-- grid three -->
+</div>
+</div>
+<!-- / introduction -->
+
+<!-- footer -->
+<footer class="primary-bg mt-4">
+<div class="container text-center py-5">
+<ul>
+    <li>
+        Terms 
+    </li>
+    <li>
+        About
+    </li>
+    <li>Have a question</li>
+</ul>
+</div>
+</footer>
+<!-- footer -->
+<script>
+
+let passwordTglCont=document.querySelector(".pass-visibility");
+  var condition = true
+passwordTglCont.addEventListener("click",function () {
+    let getPassword= document.querySelector(".password")
+     
+       if(condition){
+           this.classList.remove("slash")
+           getPassword.type="password"
+       }
+       else{
+           getPassword.type="text"
+           this.classList.add("slash")
+       }
+       condition=!condition
+})
+
+</script>
+</body>
+</html>
