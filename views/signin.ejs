@@ -15,7 +15,7 @@
 <div class="container">
     <div class="row">
         <a href="/" class="col-4">DoFollow.Appp</a>
-        <div class="col-8 text-right"><span>Already have an account? <a href="#!" class="primary-color">Log in</a></span></div>
+        <div class="col-8 text-right"><span>Already have an account? <a href="/signup" class="primary-color">Sign up</a></span></div>
     </div>
 </div>
 </header>
@@ -25,25 +25,25 @@
 <div class="primary-bg position-relative overflow-hidden py-5">
     <div class="container">
     <div class="col-lg-6 mx-auto bg-white py-3">
-    <form class="col" action="sigin" method="POST">
+    <form class="col" action="signin" method="POST">
             <h1 class="title text-center pb-3">
                     Welcome Back
                 </h1>
         <div class="form-group">
         <input class="input col" type="text"  name="email" placeholder="Email">
        
-    <% if(typeof(fullname)=="object"){ %>
-           <span class="text-danger">  <%= fullname.msg %> <% } %>
+    <% if(typeof(email)=="object"){ %>
+           <span class="text-danger">  <%= email.msg %> <% } %>
        
         </span>
         </div>
         <div class="form-group">
         <input class="input col" type="text" class="password" name="confirm-password" placeholder="Password">
-        <span class="text-danger"> <% if(typeof(password2)=="object"){ %>
-            <%= password2.msg %>
+        <span class="text-danger"> <% if(typeof(password)=="object"){ %>
+            <%= password.msg %>
         <% } %></span>
         </div>
-        <button type="submit" class="input primary-bg col text-white" id="signup">Signin</button>
+        <button type="submit" class="input primary-bg col text-white" id="">Signin</button>
     </form>
     </div>
 </div>

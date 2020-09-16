@@ -7,19 +7,58 @@
       --font-subtitle:18px; 
       --font-general: 15px;
       --light-bg: #f5f6fc;
+      --arsh-color:#656565;
       --text-blue:#202b44 !important;
       --primary-border-color:#202b44;
       --font-color:#333333;
       --btn-primary-bg:#202b44;
       --bg-hover-light:#f3edf2;
   }
+  /* index */
+
+    /*  */
+
+    header{
+        position:fixed;
+        width:100%;
+        z-index:4;    box-shadow:0 0 8px 0 rgba(0,0,0,.3);
+
+        top:0;
+        
+        background:#fff;
+    }
+    .intro{
+        width:100%;
+        height:auto;
+        margin-top: 65px;
+    }
+    .overlay{
+        width:100%;
+        height: 100%;
+        background:var(--primary-bg);
+        /* opacity: 0.9; */
+        position: absolute;
+        z-index: -1;
+    }
+    .c-btn-light.white{
+        background: #fff;
+        color: #202b44 !important;
+    }
+    .descp_1{
+        z-index: 2;
+        width:100%;
+        height: 100%;
+        color: #fff;
+    }
+    .job-list{
+    }
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     font-size: var(--font-general);
@@ -32,6 +71,7 @@ input,button,textarea{
 header{
     position: sticky;
     z-index:4px;
+    box-shadow:0 0 8px 0 rgba(0,0,0,.3);
 }
 .primary-color{
  color:var(--primary-color)   
@@ -72,7 +112,9 @@ height: 40px    ;
     height: 85px;
 }
 .job_title{
-    color: #202b44;
+    color: #212329;
+    font-size: 17px;
+    font-weight: bold;
 }
 .summarize div:nth-child(2) div:nth-child(1){
 width:auto;
@@ -87,8 +129,7 @@ display:block;
     z-index:1;
     cursor:pointer;
     position:absolute;
-    right:10px;top:50%;
-    transform:translateY(-50%)
+    right:10px;top:0px;;
 }
 .pass-visibility.slash{
     background-image:url("../images/eye-slash.svg");
@@ -108,6 +149,14 @@ padding: 4px;
 border: 2px solid transparent;
 background: var(--btn-primary-bg);
 transition: all.3s ease-in-out;
+}
+
+.alert{
+    justify-content: center;
+    z-index:2;
+    position:fixed;
+    right:10px;
+    top:100px;
 }
 .job-list:hover{
     cursor: pointer;    
@@ -134,8 +183,6 @@ input.search{
     background: var(--light-bg);
 }
 .job-descrip{
-    height:84px;
-    overflow: hidden;
     text-overflow: ellipsis
 }
 .c-btn-light:hover{
@@ -144,6 +191,22 @@ input.search{
     }
     
     .c-btn-light:hover small{
-        color: var(--text-blue)
+        color: var(--text-blue);
     }
-    
+    .type{
+        color:var(--arsh-color)
+    }
+    .type ~ span{
+        color: #6a6a6e
+    }
+    .border-red{
+        border-color:red;
+    }
+
+    @media(max-width:768px){
+        .menu{
+            width:40px;
+            height:40px;
+            background:red:
+        }
+    }
